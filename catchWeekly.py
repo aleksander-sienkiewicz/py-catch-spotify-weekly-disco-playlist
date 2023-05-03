@@ -98,6 +98,7 @@ def save_discover_weekly():
     
     
     #to get the user id
+
     user_id = sp.current_user()['id']
     # add the tracks to the Saved Weekly playlist
     sp.user_playlist_add_tracks("user_id", saved_weekly_playlist_id, song_uris, None)#add tracks to the new playlist
@@ -126,7 +127,7 @@ def get_token():
 #create the ouath
 def create_spotify_oauth():
     return SpotifyOAuth(#when u hover over this struct, vscode tell u what parametres the library needs.
-        client_id = '9e7823b029624ecd9f054eed6b63a9e8',
+        client_id = '9e7823b029624ecd9f054eed6b63a9e8',#alr revoked these dw <3
         client_secret = '5c480d2b9f2148ba8edbe4a5a4d2ea78',
         redirect_uri = url_for('redirect_page', _external=True),#gonna use our redirect route here 
         scope='user-library-read playlist-modify-public playlist-modify-private'#using 3 dif scopes
